@@ -3,7 +3,7 @@
   "name": "html-colors",
   "title": "HTML Colors",
   "description": "Search through pallettes of standard HTML colors. Offers basic + extended set. Search by name or browse by looking at the color itself.",
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "author": "almatkai",
   "contributors": ["Synacek"],
   "categories": ["Developer Tools", "Design Tools"],
