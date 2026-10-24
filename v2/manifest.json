@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "id": "com.tezbar.native.html-colors",
+  "slug": "html-colors",
+  "name": "HTML Colors",
+  "version": "0.1.0",
+  "description": "Search through pallettes of standard HTML colors. Offers basic + extended set. Search by name or browse by looking at the color itself. Original Raycast extension by Synacek; enhanced Tezbar source by almatkai.",
+  "icon": "/extensions/icons/html-colors.png",
+  "runtime": "rust",
+  "replaces": [
+    "raycast.html-colors"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "commands": [
+    {
+      "name": "html-color",
+      "title": "Search HTML Colors",
+      "description": "Quickly find HTML colors by name, hex, or RGB. Supports fuzzy search with typos and shows both basic and extended color sets.",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "mode": "view"
+    }
+  ],
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run",
+      "note": "Real application UI and OS clipboard verification has not been run."
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run",
+      "note": "Real application UI and OS clipboard verification has not been run."
+    }
+  ]
+}

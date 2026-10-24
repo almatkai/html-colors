@@ -1,0 +1,27 @@
+HTML Colors Native V2
+
+Original Raycast HTML Colors extension: Synacek, pinned Raycast extensions
+6734d85992290066fd31a7f5bee3cca3d3545a1a, extensions/html-colors. MIT.
+The unchanged icon is part of that extension; original bytes and metadata are
+preserved under tests/fixtures/upstream.
+
+Enhanced Tezbar V1 source: almatkai, ccd3bcb56fa43e993381dec63d3b3e7e9403bac0.
+Copyright (c) 2026 almatkai. MIT. The exact original LICENSE contains literal
+backslash-n sequences; tests/fixtures/own/LICENSE retains those exact bytes,
+while OWN-MIT.txt is its readable rendering.
+
+Fuse.js 7.5.0: Copyright (c) 2026 Kiro Risk (http://kiro.me).
+Apache License 2.0. Relevant Bitap and score calculation translated into
+src/fuse.rs; the original distribution and full license are in fixtures.
+The pinned V1 package.json allows ^7.1.0, but package-lock.json locks 7.5.0.
+This port follows 7.5.0, including the best-span match-mask change.
+
+Tezbar Native V2 beta reference and copied test fixtures:
+fd300e276356587726566026f072563eb9c34cb1. Apache License 2.0.
+All beta fixtures remain byte-exact. No beta source is included in the runtime
+library. The production adapter calls the host's existing SDK.
+
+Authored port and test code: MIT. Combined distributed package license:
+MIT AND Apache-2.0. See the four full license files beside this notice.
+Rust dependencies and validation-only npm dependencies retain their own
+licenses, recorded in their respective lockfiles and distributions.
