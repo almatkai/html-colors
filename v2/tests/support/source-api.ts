@@ -1,0 +1,16 @@
+export const Icon = new Proxy({}, {get:(_,key)=>`Icon.${String(key)}`});
+export const Image = {Mask: {Circle:'circle'}};
+export const copies: string[]=[];
+export const toasts: unknown[]=[];
+export const Clipboard={copy:async(text:string)=>{copies.push(text);}};
+export const Toast={Style:{Success:'success'}};
+export const showToast=async(value:unknown)=>{toasts.push(value);};
+export const showFailureToast=async(value:unknown)=>{throw new Error(JSON.stringify(value));};
+const c=(name:string)=>Object.assign((props:unknown)=>({type:name,props}),{});
+const Metadata=Object.assign(c('List.Item.Detail.Metadata'),{Separator:c('List.Item.Detail.Metadata.Separator'),Label:c('List.Item.Detail.Metadata.Label')});
+const Detail=Object.assign(c('List.Item.Detail'),{Metadata});
+const Item=Object.assign(c('List.Item'),{Detail});
+const Dropdown=Object.assign(c('List.Dropdown'),{Item:c('List.Dropdown.Item'),Section:c('List.Dropdown.Section')});
+export const List=Object.assign(c('List'),{Item,Section:c('List.Section'),Dropdown});
+export const ActionPanel=Object.assign(c('ActionPanel'),{Section:c('ActionPanel.Section')});
+export const Action=c('Action');

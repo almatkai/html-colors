@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import Ajv2020 from 'ajv/dist/2020.js';
+const json=p=>JSON.parse(readFileSync(p,'utf8'));
+const sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const provenance=json('provenance.json'),manifest=json('manifest.json');
+const validate=new Ajv2020({strict:true}).compile(json('tests/fixtures/beta/schemas/extension-v2.schema.json'));
+assert.ok(validate(manifest),JSON.stringify(validate.errors));
+assert.equal(provenance.own.commit,'ccd3bcb56fa43e993381dec63d3b3e7e9403bac0');
+assert.equal(provenance.beta.commit,'fd300e276356587726566026f072563eb9c34cb1');
+assert.equal(provenance.upstream.commit,'6734d85992290066fd31a7f5bee3cca3d3545a1a');
+assert.equal(provenance.fuse.version,'7.5.0');
+assert.equal(json('tests/fixtures/own/package-lock.json').packages['node_modules/fuse.js'].version,provenance.fuse.version);
+assert.equal(json('tests/fixtures/upstream/package.json').author,'Synacek');
+assert.equal(sha('assets/html-colors.png'),'6a1ab5bcc18c6a2ea544a3aca320a2491374939b543c5cf1529228f592e4a1a5');
+assert.equal(readFileSync('assets/html-colors.png').length,32645);
+assert.equal(sha('assets/html-colors.png'),sha('tests/fixtures/upstream/icon.png'));
+assert.equal(sha('assets/html-colors.png'),sha('tests/fixtures/own/assets/icon.png'));
+assert.equal(manifest.id,'com.tezbar.native.html-colors');assert.equal(manifest.slug,'html-colors');assert.equal(manifest.runtime,'rust');
+assert.deepEqual(manifest.replaces,['raycast.html-colors']);assert.equal(manifest.commands.length,1);assert.equal(manifest.commands[0].name,'html-color');
+assert.equal(manifest.icon,'/extensions/icons/html-colors.png');
+assert.deepEqual(manifest.verification.map(v=>[v.platform,v.state]),[['macOS','not-run'],['Windows','not-run']]);assert.ok(!('author'in manifest));
+let files=0;for(const [path,hash] of Object.entries(provenance.sha256)){assert.ok(existsSync(path),path);assert.equal(sha(path),hash,path);files++;}
+function walk(path){return readdirSync(path,{withFileTypes:true}).flatMap(d=>d.isDirectory()?walk(path+'/'+d.name):[path+'/'+d.name]);}
+for(const path of walk('tests/fixtures'))assert.ok(provenance.sha256[path],`untracked fixture provenance ${path}`);
+for(const path of ['licenses/OWN-MIT.txt','licenses/RAYCAST-MIT.txt','licenses/TEZBAR-APACHE-2.0.txt','licenses/FUSE-7.5.0.txt','licenses/NOTICE.txt'])assert.ok(readFileSync(path).length>100);
+const readme=readFileSync('README.md','utf8');assert.ok(readme.includes('src/renderer/public/extensions/icons/html-colors.png'));assert.ok(readme.includes('src-tauri/native-extensions/html-colors'));
+assert.ok(!readme.includes('/Users/'));assert.ok(!readme.toLowerCase().includes('parent review'));
+console.log(JSON.stringify({schema:'2020-12 full schema',hashedFixtures:files,iconBytes:32645,license:'MIT AND Apache-2.0'}));

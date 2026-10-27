@@ -1,0 +1,76 @@
+{
+  "own": {
+    "repository": "https://github.com/almatkai/html-colors",
+    "commit": "ccd3bcb56fa43e993381dec63d3b3e7e9403bac0",
+    "license": "MIT"
+  },
+  "upstream": {
+    "repository": "https://github.com/raycast/extensions",
+    "path": "extensions/html-colors",
+    "commit": "6734d85992290066fd31a7f5bee3cca3d3545a1a",
+    "author": "Synacek",
+    "license": "MIT"
+  },
+  "beta": {
+    "repository": "https://github.com/almatkai/Tezbar",
+    "commit": "fd300e276356587726566026f072563eb9c34cb1",
+    "license": "Apache-2.0"
+  },
+  "fuse": {
+    "version": "7.5.0",
+    "license": "Apache-2.0",
+    "resolved": "https://registry.npmjs.org/fuse.js/-/fuse.js-7.5.0.tgz",
+    "integrity": "sha512-sQtrEfA+ez/3G0cCZecF70oqpCRttCexYUG4mUrtWL49ULUzUyxokt5kyqwtKzj1270RaKih+hcP3qLcumccow=="
+  },
+  "sha256": {
+    "tests/fixtures/beta/LICENSE": "0ed6b1b2760294d4aaaa45be38e166fcc0168e1dd5190423c096fcbe1c94afbf",
+    "tests/fixtures/beta/docs/NATIVE_V2_FORMAT.md": "8bf9315ad047326dd6737587ca5491fc35faf5e3f92a2d9c63f596be0c8f7b7a",
+    "tests/fixtures/beta/schemas/extension-v2.schema.json": "6d5afda1b652605982104bdf16d1547547b98dfd707a7b2969316406c49f32af",
+    "tests/fixtures/beta/src/renderer/ExtensionRuntimeView.tsx": "cfe15d50c89b0e57666604fea06327c3bd564ee2644404676a233149a025395d",
+    "tests/fixtures/beta/src/renderer/colorConverter.ts": "3ed3ae957716fe53918b20ed7c723088d7b95b4533beb1fd18fd9d7ad421202e",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/action-runtime-overlay.tsx": "3eb4a59db0de59460ea8a2c7f4a1f6ec5b514a512f49352bf373db64ed58d604",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/action-runtime-registry.tsx": "ffbad6f70410c6d2dcf4af217abe4ab297d69c0cae2c993263c008a423175e16",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/detail-runtime.tsx": "32eecb50891e0f282bd3d78d8a38193ec24540bf70c3fdc8e43a1d368c97d54c",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/index.tsx": "7fc8413a72b92e8f88b0939cd93f91624018fe0765baa1e71b38b86f8cc77a64",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/ipc-bridge.ts": "17784548760d476efebeae36d5b03e9c50a69c2da2b92ce0163cabbfe9566d97",
+    "tests/fixtures/beta/src/renderer/src/raycast-api/list-runtime.tsx": "c7e253c34ce6e0a5132cab96bf1f0388393faca79ff57c3fdc7956f377a0ab0f",
+    "tests/fixtures/beta/src/renderer/ui/Markdown.tsx": "d205312b35293a433d5398e4edf1dcc96662cacd34036e8ee3ec503f65eee2de",
+    "tests/fixtures/beta/src/renderer/ui/primitives.tsx": "0bcedb2a1158a00ae7d4237f6ee875a58d9496e8576fb72ac78b79af82365044",
+    "tests/fixtures/beta/src/shared/extensionRuntime.ts": "837b804856baa6b16ebda080920af456268fefcffa7a1c3e2964b95d697ee387",
+    "tests/fixtures/beta/src-tauri/src/native_core/common.rs": "280a0a2f0dd04a8570b320aafc0c3ece0f5de8ddb21c363645567d6a35d84da7",
+    "tests/fixtures/beta/src-tauri/src/native_core/extensions/native.rs": "3192be6beccc110cd6daa22db412e0f90685957ec51b3c71103b78e239978691",
+    "tests/fixtures/beta/src-tauri/src/native_core/extensions/v2_runtime.rs": "df96675ba916a3d70b8e0e5da76f7a9422d238cc3fbe3a5a6178fef21662a6a0",
+    "tests/fixtures/beta/src-tauri/src/native_core/extensions/v2_sdk.rs": "4f987346f863db9a7bd6aa1d5a99e149925dc69a44d629727ccc80a567cd27c2",
+    "tests/fixtures/beta/src-tauri/src/native_core/platform.rs": "75fa7ce4204edbbdb0f4a5410895b32239939b707256c484dc3c4f9de390b5a1",
+    "tests/fixtures/fuse-7.5.0/LICENSE": "cc807e3caa26cdee316bab2ff6fdb508a2f619b74959fe59e513ef6e61635ebe",
+    "tests/fixtures/fuse-7.5.0/dist/fuse.cjs": "6249885432f29beeabcc2aeced1cf135cae151e95fb8e71599760f6962de369f",
+    "tests/fixtures/fuse-7.5.0/package.json": "5e06f418f8fcd68a5b21df4114043c645752fdefefac575b72d920da3ab633d8",
+    "tests/fixtures/oracle.json": "cf7521c998d285e071e1935a279c96d34a47c667f73427e61f9ccff49e1052a3",
+    "tests/fixtures/own/LICENSE": "1d7dbdbcd4fe14dfa08334fab20bffad23c1290f195792a3a4420dadf9912f81",
+    "tests/fixtures/own/assets/icon.png": "6a1ab5bcc18c6a2ea544a3aca320a2491374939b543c5cf1529228f592e4a1a5",
+    "tests/fixtures/own/package-lock.json": "924f5e4693f645cbfbe650fde1bec92189ed0e9ad12058d26af707297d420ab2",
+    "tests/fixtures/own/package.json": "8008ff8a27f73b0ff39841ea6c5b19b13348010fc226fbcf69a5e0854712f262",
+    "tests/fixtures/own/raycast-env.d.ts": "4f0eba9d59587a7af3bbbfdfac07477047d38099baa4db3e7d79fbf2aa3e16cc",
+    "tests/fixtures/own/src/components/color-list-item-actions.tsx": "7c91b747a6516b59b0fe2e39c94d8c5f477df86b586fe8de8ec15809eb42135d",
+    "tests/fixtures/own/src/components/color-list-item-detail.tsx": "91907ed745bcd5fd743658e3c4c9d095b2cba8222a194c1dc183b8daae1bcdf1",
+    "tests/fixtures/own/src/components/color-list-item.tsx": "4b7aa031535f9d99afc22bced5e2a8330b9a54ce237a676c4930efa83eb864b1",
+    "tests/fixtures/own/src/components/color-section.tsx": "26ababb5aa999ac59d83e434f0973b1d099ea508d0a9ac75744073fdb4705cdb",
+    "tests/fixtures/own/src/constants.ts": "837669bc7539a6b9b71d91224f1a7d296ac95016958e3129be0181f72a5d57d7",
+    "tests/fixtures/own/src/html-color.tsx": "849308152c86502901956fe8a86be11ce0f34a4b8ac9a2a63968dc6f51dcb2e6",
+    "tests/fixtures/own/src/types.ts": "fdf4e4dbc6f0f4cc11a81879e6863e402d9a7d40c1220ea1e2d2ed6563a09e07",
+    "tests/fixtures/own/src/utils/color-utils.ts": "cce0335f4b5107e83d6bc98616e1067a86c00426f06929dc4ccad62e61b277ed",
+    "tests/fixtures/own/src/utils/search-utils.ts": "40d511bb866a17688b1dd384068db7b90ec9ddd16d9491c0e377c52a3153b772",
+    "tests/fixtures/own/src/utils/section-utils.ts": "a9b9b40b76b6c35aef2ec61ce91b3801d555b531a1c36940588aa7de3e07ff8e",
+    "tests/fixtures/own/test/html-colors.test.ts": "5eb38ed52bd71579ed1adc9c176e08a3940367e0a69e7f10bd8730be77aadf30",
+    "tests/fixtures/own/tsconfig.json": "b2a8b508c4c6341191f14aaa1adb56bd0b039697ade2f25cac3cfc3c0fcd9450",
+    "tests/fixtures/upstream/LICENSE": "7f727f8b20cdd0e65f84e70b9cac2fce337dcecee4dc88955eb012ea27f02755",
+    "tests/fixtures/upstream/icon.png": "6a1ab5bcc18c6a2ea544a3aca320a2491374939b543c5cf1529228f592e4a1a5",
+    "tests/fixtures/upstream/package.json": "dc468c535780ed991f3cbc10679b070a9fc987dfb97739a1a4c02307dce4d713"
+  },
+  "generatedOracle": {
+    "path": "tests/fixtures/oracle.json",
+    "script": "scripts/snapshot.mjs",
+    "sourceCommit": "ccd3bcb56fa43e993381dec63d3b3e7e9403bac0",
+    "fuseVersion": "7.5.0"
+  }
+}
